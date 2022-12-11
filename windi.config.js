@@ -1,5 +1,4 @@
 import { defineConfig } from 'windicss/helpers';
-import colors from 'windicss/colors';
 import plugin from 'windicss/plugin';
 
 export default defineConfig({
@@ -15,9 +14,7 @@ export default defineConfig({
         '2xl': '1536px',
       },
       colors: {
-        blue: colors.sky,
-        red: colors.rose,
-        pink: colors.fuchsia,
+        'white': '#fff'
       },
       fontFamily: {
         sans: ['Graphik', 'sans-serif'],

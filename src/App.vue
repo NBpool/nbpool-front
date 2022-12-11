@@ -1,9 +1,26 @@
 <template>
   <div id="app">
-    <router-view />
+    <customHeader></customHeader>
+    <div class="main-content">
+      <router-view />
+    </div>
   </div>
 </template>
 
-<style lang="scss">
+<script>
+export default {
+  name: 'App',
+  components: {
+    customHeader: () => import('@/components/layout/customHeader.vue'),
+    customFooter: () => import('@/components/layout/customFooter.vue'),
+  },
+};
+</script>
 
+<style lang="scss" scoped>
+#app {
+  .main-content {
+    padding-top: 54px;
+  }
+}
 </style>
