@@ -9,7 +9,7 @@
       <div class="head-item">價格</div>
     </div>
     <div class="pool-content">
-      <el-collapse v-model="activeName" accordion>
+      <el-collapse v-model="activeName" accordion @change="openChart">
         <el-collapse-item name="1">
           <div class="pool-title space-between" slot="title">
             <div class="pool-item">ALEO</div>
@@ -18,6 +18,21 @@
             <div class="pool-item">PoW (zkSNARK)</div>
             <div class="pool-item">122.67 MC/s</div>
             <div class="pool-item">$0.0863</div>
+          </div>
+          <div class="chart-content">
+            <el-button type="primary" size="mini">生態池</el-button>
+            <div class="flex-start mt-12px">
+              <el-radio-group v-model="date" size="mini">
+                <el-radio-button label="周"></el-radio-button>
+                <el-radio-button label="月"></el-radio-button>
+              </el-radio-group>
+              <el-divider direction="vertical" class="mx-20px"></el-divider>
+              <el-link class="mr-4px">更多统计</el-link>
+              <i class="el-icon-arrow-right"></i>
+            </div>
+            <div class="chart-wrapper" v-if="showChart">
+              <lineCharts></lineCharts>
+            </div>
           </div>
         </el-collapse-item>
       </el-collapse>
@@ -30,7 +45,18 @@ export default {
   data() {
     return {
       activeName: 1,
+      date: '周',
+      showChart: false,
     };
+  },
+  components: {
+    lineCharts: () => import('@/components/charts/line.vue'),
+  },
+  methods: {
+    openChart() {
+      console.log('aaa');
+      this.showChart = !this.showChart;
+    },
   },
 };
 </script>
@@ -47,7 +73,7 @@ export default {
       text-align: left;
       padding: 10px 4px;
       text-indent: 10px;
-      &:last-child{
+      &:last-child {
         margin-right: 21px;
       }
     }
@@ -61,6 +87,15 @@ export default {
         text-align: left;
         padding: 0px 4px;
         text-indent: 10px;
+      }
+    }
+    .chart-content {
+      width: 100%;
+      height: 500px;
+      .chart-wrapper {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 50px;
       }
     }
   }

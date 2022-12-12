@@ -4,6 +4,7 @@
     <div class="main-content">
       <router-view />
     </div>
+    <customFooter></customFooter>
   </div>
 </template>
 
@@ -21,6 +22,7 @@ export default {
 #app {
   .main-content {
     padding-top: 54px;
+    padding-bottom: 54px;
   }
 }
 </style>
