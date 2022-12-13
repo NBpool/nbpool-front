@@ -88,7 +88,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 54px);
   background-color: #1f457d;
   background-size: cover;
   &::v-deep {

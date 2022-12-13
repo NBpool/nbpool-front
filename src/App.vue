@@ -4,13 +4,18 @@
     <div class="main-content">
       <router-view />
     </div>
-    <customFooter></customFooter>
+    <customFooter v-if="!excludeFootArray.includes(this.$route.path)"></customFooter>
   </div>
 </template>
 
 <script>
 export default {
   name: 'App',
+  data() {
+    return {
+      excludeFootArray: ['/login','/register','/forget']
+    }
+  },
   components: {
     customHeader: () => import('@/components/layout/customHeader.vue'),
     customFooter: () => import('@/components/layout/customFooter.vue'),
@@ -22,7 +27,6 @@ export default {
 #app {
   .main-content {
     padding-top: 54px;
-    padding-bottom: 54px;
   }
 }
 </style>

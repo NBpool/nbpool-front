@@ -14,7 +14,8 @@ export default defineConfig({
         '2xl': '1536px',
       },
       colors: {
-        'white': '#fff'
+        'white': '#fff',
+        'primary': '#426fb3'
       },
       fontFamily: {
         sans: ['Graphik', 'sans-serif'],

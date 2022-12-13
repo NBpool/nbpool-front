@@ -42,7 +42,7 @@
           <span v-else>登录中...</span>
         </el-button>
         <div style="float: left">
-          <router-link class="link-type" to="/forget">返回登录</router-link>
+          <router-link class="link-type" to="/login">返回登录</router-link>
         </div>
       </el-form-item>
     </el-form>
@@ -151,7 +151,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 54px);
   background-color: #1f457d;
   background-size: cover;
   &::v-deep {

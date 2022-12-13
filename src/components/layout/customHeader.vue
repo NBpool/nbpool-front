@@ -8,8 +8,8 @@
       </div>
       <div class="right-item flex-start">
         <div class="no-login mr-20px" v-if="!token">
-          <el-button size="small">登录</el-button>
-          <el-button size="small">注册</el-button>
+          <el-button size="small" @click="toPage('/login')">登录</el-button>
+          <el-button size="small" @click="toPage('/register')">注册</el-button>
         </div>
         <div class="has-login mr-50px" v-else>
           <i class="el-icon-bell mr-15px text-white cursor-pointer"></i>
@@ -88,6 +88,9 @@ export default {
           });
         })
         .catch(() => {});
+    },
+    toPage(page) {
+      this.$router.push(page);
     },
   },
 };
