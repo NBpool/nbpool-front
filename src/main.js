@@ -9,7 +9,11 @@ import './style/index.scss';
 import './assets/icons'
 import '@/permission';
 import 'windi.css';
+import plugins from './plugins' // plugins
+import { download } from '@/utils/request'
 Vue.use(Element);
+Vue.use(plugins)
+Vue.prototype.download = download
 Vue.config.productionTip = false;
 
 new Vue({

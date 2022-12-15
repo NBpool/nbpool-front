@@ -8,6 +8,11 @@ module.exports = defineConfig({
       // see https://github.com/windicss/vite-plugin-windicss/blob/main/packages/plugin-utils/src/options.ts
     },
   },
+  configureWebpack: {
+    resolve: {
+      fallback: { path: require.resolve("path-browserify") },
+    },
+  },
   chainWebpack(config) {
     config.plugins.delete('preload') // TODO: need test
     config.plugins.delete('prefetch') // TODO: need test

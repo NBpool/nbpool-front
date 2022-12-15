@@ -44,9 +44,9 @@
 export default {
   data() {
     return {
-      activeName: 1,
+      activeName: ['1'],
       date: '周',
-      showChart: false,
+      showChart: true,
     };
   },
   components: {
@@ -54,7 +54,6 @@ export default {
   },
   methods: {
     openChart() {
-      console.log('aaa');
       this.showChart = !this.showChart;
     },
   },
