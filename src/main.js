@@ -8,9 +8,13 @@ import Element from 'element-ui';
 import './style/index.scss';
 import './assets/icons'
 import '@/permission';
-import 'windi.css';
+import './assets/styles/element-variables.scss'
+import '@/assets/styles/index.scss' // global css
+import '@/assets/styles/ruoyi.scss' // ruoyi css
 import plugins from './plugins' // plugins
 import { download } from '@/utils/request'
+import 'windi.css';
+
 Vue.use(Element);
 Vue.use(plugins)
 Vue.prototype.download = download

@@ -15,7 +15,7 @@
           <i class="el-icon-bell mr-15px text-white cursor-pointer"></i>
           <el-dropdown @command="handleCommand" placement="top">
             <span class="el-dropdown-link text-white cursor-pointer">
-              takeorangeforyou@gmail.com<i class="el-icon-arrow-down el-icon--right"></i>
+              {{name}}<i class="el-icon-arrow-down el-icon--right"></i>
             </span>
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item command="center">个人中心</el-dropdown-item>
@@ -52,7 +52,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(['token']),
+    ...mapGetters(['token','name']),
   },
   methods: {
     handleCommand(val) {
@@ -66,7 +66,7 @@ export default {
           this.currentLanguage = val;
           break;
         case 'center':
-          this.$router.push('/center');
+          this.$router.push('/center/index');
           break;
         case 'logout':
           this.logout();

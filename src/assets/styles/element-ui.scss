@@ -90,3 +90,17 @@
   .el-submenu__icon-arrow {
   display: none;
 }
+
+.el-submenu__title{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.el-menu-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
