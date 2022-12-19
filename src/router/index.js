@@ -26,19 +26,14 @@ export const constantRoutes = [
     component: () => import('@/views/login/register'),
   },
   {
-    path: "/center",
-    name: "center",
-    component: () => import('@/views/center/index'),
-  },
-  {
     path: '/center',
     component: Layout,
     children: [
       {
         path: 'index',
-        component: () => import('@/views/index'),
+        component: () => import('@/views/center/index/index'),
         name: 'Index',
-        meta: { title: '首页', icon: 'dashboard', affix: true }
+        meta: { title: '我的首页', icon: 'dashboard', affix: true }
       }
     ]
   },

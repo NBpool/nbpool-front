@@ -16,15 +16,15 @@ export default {
     const { icon, title } = context.props
     const vnodes = []
 
-    if (icon) {
-      vnodes.push(<svg-icon icon-class={icon}/>)
-    }
+    // if (icon) {
+    //   vnodes.push(<svg-icon icon-class={icon}/>)
+    // }
 
     if (title) {
       if (title.length > 5) {
-        vnodes.push(<span slot='title' title={(title)}>{(title)}</span>)
+        vnodes.push(<span class="sub-menu" slot='title' title={(title)}>{(title)}</span>)
       } else {
-        vnodes.push(<span slot='title'>{(title)}</span>)
+        vnodes.push(<span class="sub-menu" slot='title'>{(title)}</span>)
       }
     }
     return vnodes

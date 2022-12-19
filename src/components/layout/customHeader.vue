@@ -3,8 +3,8 @@
     <div class="content-wrapper space-between">
       <div class="left-item flex-start">
         <img class="mr-20px" src="https://www.hpool.in/static/media/logo.a4b65d1e.png" alt="" />
-        <router-link to="/" class="mr-20px text-white">下载中心</router-link>
-        <router-link to="/" class="text-white">帮助中心</router-link>
+        <router-link to="/" class="mr-20px text-white hover:text-primary">下载中心</router-link>
+        <router-link to="/" class="text-white hover:text-primary">帮助中心</router-link>
       </div>
       <div class="right-item flex-start">
         <div class="no-login mr-20px" v-if="!token">

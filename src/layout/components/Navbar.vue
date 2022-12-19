@@ -25,7 +25,7 @@
 
       </template> -->
 
-      <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
+      <!-- <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
         <div class="avatar-wrapper">
           <img :src="avatar" class="user-avatar">
           <i class="el-icon-caret-bottom" />
@@ -41,7 +41,7 @@
             <span>退出登录</span>
           </el-dropdown-item>
         </el-dropdown-menu>
-      </el-dropdown>
+      </el-dropdown> -->
     </div>
   </div>
 </template>
@@ -74,22 +74,22 @@ export default {
       'avatar',
       'device'
     ]),
-    setting: {
-      get() {
-        return this.$store.state.settings.showSettings
-      },
-      set(val) {
-        this.$store.dispatch('settings/changeSetting', {
-          key: 'showSettings',
-          value: val
-        })
-      }
-    },
-    topNav: {
-      get() {
-        return this.$store.state.settings.topNav
-      }
-    }
+    // setting: {
+    //   get() {
+    //     return this.$store.state.settings.showSettings
+    //   },
+    //   set(val) {
+    //     this.$store.dispatch('settings/changeSetting', {
+    //       key: 'showSettings',
+    //       value: val
+    //     })
+    //   }
+    // },
+    // topNav: {
+    //   get() {
+    //     return this.$store.state.settings.topNav
+    //   }
+    // }
   },
   methods: {
     toggleSideBar() {

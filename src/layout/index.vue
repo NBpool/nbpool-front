@@ -74,10 +74,14 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    margin-top: 20px;
     &.mobile.openSidebar {
       position: fixed;
       top: 0;
     }
+  }
+  .main-container{
+    padding: 0 20px;
   }
 
   .drawer-bg {
