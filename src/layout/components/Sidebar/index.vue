@@ -1,21 +1,13 @@
 <template>
   <div
     :class="{ 'has-logo': showLogo }"
-    :style="{
-      backgroundColor: settings.sideTheme === 'theme-dark' ? variables.menuBackground : variables.menuLightBackground,
-    }"
   >
     <!-- <logo v-if="showLogo" :collapse="isCollapse" /> -->
     <el-scrollbar :class="settings.sideTheme" wrap-class="scrollbar-wrapper">
       <el-menu
         :default-active="activeMenu"
         :collapse="isCollapse"
-        :background-color="
-          settings.sideTheme === 'theme-dark' ? variables.menuBackground : variables.menuLightBackground
-        "
-        :text-color="settings.sideTheme === 'theme-dark' ? variables.menuColor : variables.menuLightColor"
         :unique-opened="true"
-        :active-text-color="settings.theme"
         :collapse-transition="false"
         mode="vertical"
         class="my-menu"
@@ -39,7 +31,7 @@
 import { mapGetters, mapState } from 'vuex';
 import Logo from './Logo';
 import SidebarItem from './SidebarItem';
-import variables from '@/assets/styles/variables.scss';
+// import variables from '@/assets/styles/variables.scss';
 
 export default {
   components: { SidebarItem, Logo },
@@ -58,9 +50,9 @@ export default {
     showLogo() {
       return this.$store.state.settings.sidebarLogo;
     },
-    variables() {
-      return variables;
-    },
+    // variables() {
+    //   return variables;
+    // },
     isCollapse() {
       return !this.sidebar.opened;
     },
