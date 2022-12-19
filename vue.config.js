@@ -13,6 +13,13 @@ module.exports = defineConfig({
       fallback: { path: require.resolve("path-browserify") },
     },
   },
+  css: {
+    loaderOptions: {
+      sass: {
+        sassOptions: { outputStyle: "expanded" }
+      }
+    }
+  },
   chainWebpack(config) {
     config.plugins.delete('preload') // TODO: need test
     config.plugins.delete('prefetch') // TODO: need test
