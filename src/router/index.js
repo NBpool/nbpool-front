@@ -37,6 +37,74 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: '/assets',
+    component: Layout,
+    name: 'assets',
+    meta: { title: '资产管理', icon: 'dashboard', affix: true },
+    children: [
+      {
+        path: 'assetDetail',
+        component: () => import('@/views/assets/assetDetail/index'),
+        name: 'assetDetail',
+        redirect: '/assets/assetDetail/index',
+        meta: { title: '资产明细', icon: 'dashboard', affix: true },
+        children: [
+          {
+            path: 'index',
+            component: () => import('@/views/assets/assetDetail/asset/index'),
+            name: 'asset',
+            hidden: true,
+          },
+          {
+            path: 'withdraw',
+            component: () => import('@/views/assets/assetDetail/withdraw/index'),
+            name: 'withdraw',
+            hidden: true,
+          },
+          {
+            path: 'cooperate',
+            component: () => import('@/views/assets/assetDetail/cooperate/index'),
+            name: 'cooperate',
+            hidden: true,
+          },
+          {
+            path: 'point',
+            component: () => import('@/views/assets/assetDetail/point/index'),
+            name: 'point',
+            hidden: true,
+          },
+        ]
+      },
+      {
+        path: 'flow',
+        component: () => import('@/views/assets/flow/index'),
+        name: 'flow',
+        meta: { title: '充提记录', icon: 'dashboard', affix: true },
+        redirect: '/assets/flow/withdraw',
+        children: [
+          {
+            path: 'charge',
+            component: () => import('@/views/assets/flow/charge/index'),
+            name: 'charge',
+            hidden: true,
+          },
+          {
+            path: 'withdraw',
+            component: () => import('@/views/assets/flow/withdraw/index'),
+            name: 'withdraw',
+            hidden: true,
+          },
+        ]
+      },
+      {
+        path: 'bill',
+        component: () => import('@/views/assets/bill/index'),
+        name: 'bill',
+        meta: { title: '賬單流水', icon: 'dashboard', affix: true }
+      },
+    ]
+  },
 ];
 
 // 动态路由，基于用户权限动态去加载

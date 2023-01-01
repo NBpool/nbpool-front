@@ -98,15 +98,6 @@
         background-color: rgba(0, 0, 0, 0.06) !important;
       }
     }
-
-    & .theme-dark .nest-menu .el-submenu>.el-submenu__title,
-    & .theme-dark .el-submenu .el-menu-item {
-      background-color: $base-sub-menu-background !important;
-
-      &:hover {
-        background-color: $base-sub-menu-hover !important;
-      }
-    }
   }
 
   .hideSidebar {

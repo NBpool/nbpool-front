@@ -15,7 +15,8 @@ export default defineConfig({
       },
       colors: {
         'white': '#fff',
-        'primary': '#426fb3'
+        'primary': '#426fb3',
+        'danger': '#ff0000'
       },
       fontFamily: {
         sans: ['Graphik', 'sans-serif'],
